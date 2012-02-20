@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   
   s.required_rubygems_version = '>= 1.3.7'
   s.require_paths = ["lib"]
-  s.files = `git ls-files`.split("\n")
-  #s.files = Dir.glob("lib}**/*") + %w(LICENSE.txt) + ["ext/**/*.{c, h, rb}"]
+  s.files = Dir.glob("lib/**/*.rb") +
+            Dir.glob('ext/**/*.{c,h,rb}')
 
   #s.add_development_dependency('minitest', ["= 2.6.1"])
 end

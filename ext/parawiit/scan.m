@@ -1,17 +1,17 @@
-#import "ruby_bluetooth.h"
+#import "parawiit.h"
 
 extern VALUE rbt_cBluetoothDevice;
 
 VALUE rbt_scan(VALUE self) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     BluetoothDeviceScanner *bds = [BluetoothDeviceScanner new];
-
+    
     [bds startSearch];
-
+    
     CFRunLoopRun();
-
+    
     [pool release];
-
+    
     return [bds devices];
 }
 

@@ -1,7 +1,5 @@
 require 'mkmf'
 
-dir_config 'bluetooth'
-
 if RUBY_PLATFORM =~ /darwin/ then
   $LDFLAGS << ' -framework IOBluetooth'
 
