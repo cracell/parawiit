@@ -5,9 +5,10 @@
 
 #import <ruby.h>
 
+VALUE rbt_scan(VALUE);
 
 @interface BluetoothDeviceScanner : NSObject {
-  IOBluetoothDeviceInquirt *   _inquiry;
+  IOBluetoothDeviceInquiry *   _inquiry;
   BOOL                         _busy;
   VALUE                        _devices;
 }
