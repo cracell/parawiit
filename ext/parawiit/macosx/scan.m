@@ -1,6 +1,6 @@
 #import "parawiit.h"
 
-extern VALUE rbt_cBluetoothDevice;
+extern VALUE rbt_cParawiitDevice;
 
 VALUE rbt_scan(VALUE self) {
     NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
@@ -33,7 +33,7 @@ VALUE rbt_scan(VALUE self) {
     if (device_name)
         name = rb_str_new2(device_name);
 
-    VALUE dev = rb_funcall(rbt_cBluetoothDevice, rb_intern("new"), 2,
+    VALUE dev = rb_funcall(rbt_cParawiitDevice, rb_intern("new"), 2,
                            address, name);
 
     rb_ary_push(_devices, dev);
