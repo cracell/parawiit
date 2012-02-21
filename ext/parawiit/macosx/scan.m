@@ -24,6 +24,7 @@ VALUE rbt_scan(VALUE self) {
 
 - (void) deviceInquiryDeviceFound:(IOBluetoothDeviceInquiry*)sender
                            device:(IOBluetoothDevice*)device {
+    
     VALUE address;
     VALUE name = Qnil;
     const char * device_name = [[device name] UTF8String];
@@ -37,6 +38,9 @@ VALUE rbt_scan(VALUE self) {
                            address, name);
 
     rb_ary_push(_devices, dev);
+    
+    //Stops after finding one wiimote. Later should find multiple. (This makes testing faster!)
+    [_inquiry stop];
 }
 
 - (void) deviceInquiryDeviceNameUpdated:(IOBluetoothDeviceInquiry*)sender
