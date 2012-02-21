@@ -1,7 +1,6 @@
 #import <ruby.h>
 
 #import <IOBluetooth/objc/IOBluetoothDevice.h>
-// #import <IOBluetooth/objc/IOBluetoothDevice.h>
 // #import <IOBluetooth/objc/IOBluetoothL2CAPChannel.h>
 #import <IOBluetooth/objc/IOBluetoothDeviceInquiry.h>
 // #import <IOBluetooth/objc/IOBluetoothHostController.h>

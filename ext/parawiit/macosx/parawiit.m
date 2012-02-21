@@ -15,7 +15,7 @@ void Init_parawiit() {
     VALUE klass = rb_define_class("Parawiit",
       rb_cObject);
   
-  //rb_define_singleton_method(rbt_mBluetooth, "scan", rbt_scan, 0);
+  rb_define_singleton_method(klass, "scan", rbt_scan, 0);
   rb_define_singleton_method(klass, "bonjour", parawiit_bonjour, 0);
   
 }
