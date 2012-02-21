@@ -1,6 +1,6 @@
 = wiimote-gyro
 
-Description goes here.
+Lots of code borrowed from Darwiin-wiimote and ruby-bluetooth.
 
 == Contributing to wiimote-gyro
  
