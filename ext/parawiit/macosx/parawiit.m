@@ -1,4 +1,7 @@
-#import "parawiit.h"
+//#import "parawiit.h"
+#import <ruby.h>
+
+//#import <IOBluetooth/IOBluetoothUserLib.h>
 
 /* our new native method: it just returns
  * the string "bonjour!" */
@@ -18,7 +21,12 @@ void Init_parawiit(void) {
    rb_define_singleton_method(klass,
      "bonjour", hola_bonjour, 0);
 }
-
+// 
+// @interface BluetoothDeviceScanner : NSObject {
+// 
+// }
+// 
+// @end
 
 // #import "parawiit.h"
 // 

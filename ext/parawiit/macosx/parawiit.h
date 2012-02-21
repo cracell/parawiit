@@ -1,6 +1,6 @@
 #import <ruby.h>
 
-// #import <Cocoa/Cocoa.h>
+#import <IOBluetooth/IOBluetoothUserLib.h>
 // #import <IOBluetooth/objc/IOBluetoothDevice.h>
 // #import <IOBluetooth/objc/IOBluetoothL2CAPChannel.h>
 // #import <IOBluetooth/objc/IOBluetoothDevice.h>
@@ -11,13 +11,13 @@
 
 VALUE rbt_scan(VALUE);
 
-// @interface BluetoothDeviceScanner : NSObject {
-//   IOBluetoothDeviceInquiry *   _inquiry;
-//   BOOL                         _busy;
-//   VALUE                        _devices;
-// }
-// 
-// - (void) stopSearch;
-// - (IOReturn) startSearch;
-// - (VALUE) devices;
-// @end
+@interface BluetoothDeviceScanner : NSObject {
+  IOBluetoothDeviceInquiry *   _inquiry;
+  BOOL                         _busy;
+  VALUE                        _devices;
+}
+
+- (void) stopSearch;
+- (IOReturn) startSearch;
+- (VALUE) devices;
+@end

@@ -2,6 +2,7 @@ require 'mkmf'
 
 if RUBY_PLATFORM =~ /darwin/ then
   $LDFLAGS << ' -framework IOBluetooth'
+  $DLDFLAGS << " -framework Foundation"
 
   create_makefile 'parawiit/parawiit', 'macosx'
 

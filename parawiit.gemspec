@@ -13,7 +13,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = '>= 1.3.7'
   s.require_paths = ["lib"]
   s.files = Dir.glob("lib/**/*.rb") +
-            Dir.glob('ext/**/*.{c,h,rb}')
+            Dir.glob('ext/**/*.{c,h,m,rb}')
 
   #s.add_development_dependency('minitest', ["= 2.6.1"])
 end
